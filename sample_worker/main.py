@@ -30,6 +30,7 @@ def start():
 @app.route('/shutdown')
 def shutdown():
     shutdown_server()
+    # TODO: make this async
     return 'Server shutting down...'
 
 
