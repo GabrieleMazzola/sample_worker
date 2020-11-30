@@ -1,8 +1,3 @@
-image: docker
-
-services:
-    - docker:dind
-
 stages:
     - test
     - deploy
@@ -20,7 +15,5 @@ step-deploy.prod:
         - main
     script:
         - apt-get install -y python-pip
-        - pip install docker-compose
-        - docker-compose up -d --build
+        - pip install flask
     environment: production
-    when: manual
