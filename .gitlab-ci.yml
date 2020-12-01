@@ -1,0 +1,12 @@
+stages:
+    - deploy
+
+step-deploy.prod:
+    stage: deploy
+    only:
+        - main
+    script:
+        - apt-get update -qy
+        - apt-get install -y python-dev python-pip
+        - pip install flask
+    environment: production
