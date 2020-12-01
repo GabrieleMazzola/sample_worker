@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  chrome1:
+    image: "selenium/standalone-chrome:87.0"
+    ports:
+      - "5001:4444"
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      START_XVFB: "false"
+  chrome2:
+    image: "selenium/standalone-chrome:87.0"
+    ports:
+      - "5002:4444"
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      START_XVFB: "false"
+  chrome3:
+    image: "selenium/standalone-chrome:87.0"
+    ports:
+      - "5003:4444"
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      START_XVFB: "false"
