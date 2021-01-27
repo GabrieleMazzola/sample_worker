@@ -27,3 +27,5 @@ for driver in drivers:
 
 for driver in drivers:
     driver.quit()
+
+# docker logs -f chrome1
